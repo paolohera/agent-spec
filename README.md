@@ -108,7 +108,7 @@ The SEO skill is guidance for implementation and auditing; it does not override 
 
 The current specification version is stored in `VERSION`. The project initializer is included under `scripts/`.
 
-Version 1.2.0 adds the corrected instruction-conflict model and the SEO development skill.
+Version 1.2.1 refines the SEO development skill for current search-engine guidance and verification semantics. Version 1.2.0 adds the corrected instruction-conflict model and the SEO development skill.
 
 Projects should record the AgentSpec version they use in `.agents/manifest.md`.
 

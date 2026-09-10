@@ -1,5 +1,17 @@
 # Changelog
 
+## 1.2.1
+
+- Refined the SEO skill using current search-engine guidance.
+- Replaced FID with INP in Core Web Vitals guidance.
+- Changed title and meta-description character counts from hard requirements to practical guidance.
+- Clarified that Google ignores sitemap `changefreq` and `priority` values and that accurate `lastmod` is preferred when available.
+- Clarified heading guidance so a single H1 is a useful convention rather than an absolute search-engine requirement.
+- Improved image alt-text guidance by removing arbitrary character limits.
+- Added clearer distinctions between search-engine requirements, SEO best practices, and project-specific choices.
+- Improved Open Graph/Twitter-X guidance and verification/reporting requirements.
+- Added current SEO source-of-truth guidance.
+
 ## 1.2.0
 
 - Corrected the instruction hierarchy so legitimate explicit user requirements are not automatically overridden by workflows, checklists, or engineering guidelines.
