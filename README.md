@@ -50,7 +50,31 @@ agent-spec/
 
 ## Using AgentSpec in a project
 
-Copy the framework files into the project root, then create project-specific context:
+### Quick initialization (PowerShell)
+
+From a checkout of this repository:
+
+```powershell
+.\scripts\init-project.ps1 -Target C:\projects\my-project
+```
+
+The initializer:
+
+- detects common project technologies from repository files
+- installs `AGENTS.md`, `CLAUDE.md`, `VERSION`, and `.agents/`
+- creates project-specific context files under `.agents/context/`
+- records non-secret stack detection in `.agents/context/detected-stack.md`
+- does not read or copy `.env` values
+- skips existing files by default
+
+Use `-Force` only when you intentionally want to overwrite existing AgentSpec-managed files. Use `-SkipDetection` to disable stack detection.
+
+After initialization, review the generated context and have your coding agent inspect the repository before filling in project-specific facts.
+
+### Manual layout
+
+A project using AgentSpec should look like this:
+
 
 ```text
 your-project/
@@ -71,11 +95,11 @@ your-project/
 └── source/
 ```
 
-The `context/` directory is intentionally project-specific and is not populated with assumptions by this repository.
+The `context/` directory is project-specific. The initializer may add structural detection, but project facts should be confirmed against the actual repository.
 
 ## Versioning
 
-The current specification version is stored in `VERSION`.
+The current specification version is stored in `VERSION`. The v1.1 initializer is included under `scripts/`.
 
 Projects should record the AgentSpec version they use in `.agents/manifest.md`.
 

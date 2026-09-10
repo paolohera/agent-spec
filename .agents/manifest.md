@@ -1,8 +1,8 @@
 # AgentSpec Manifest
 
 name: AgentSpec
-version: 1.0.0
-purpose: Reusable AI software engineering specification.
+version: 1.1.0
+purpose: Reusable AI software engineering specification with project initialization and stack detection.
 
 ## Components
 
