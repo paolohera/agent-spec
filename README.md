@@ -12,6 +12,7 @@ Its purpose is to give AI coding agents a consistent software-engineering discip
 - verify behavior rather than treating a successful build as proof
 - clearly distinguish implemented work from verified work
 - keep project-specific knowledge separate from reusable engineering rules
+- distinguish user requirements from implementation guidance when resolving conflicts
 
 ## Design
 
@@ -97,9 +98,17 @@ your-project/
 
 The `context/` directory is project-specific. The initializer may add structural detection, but project facts should be confirmed against the actual repository.
 
+## SEO development
+
+SEO guidance is available as a modular skill at `.agents/skills/seo.md`. It covers technical SEO, metadata, crawlability, sitemaps, structured data, performance, local and international SEO, and honest verification/reporting.
+
+The SEO skill is guidance for implementation and auditing; it does not override explicit project requirements or higher-order safety/security constraints.
+
 ## Versioning
 
-The current specification version is stored in `VERSION`. The v1.1 initializer is included under `scripts/`.
+The current specification version is stored in `VERSION`. The project initializer is included under `scripts/`.
+
+Version 1.2.0 adds the corrected instruction-conflict model and the SEO development skill.
 
 Projects should record the AgentSpec version they use in `.agents/manifest.md`.
 

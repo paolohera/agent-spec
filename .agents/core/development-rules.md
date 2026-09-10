@@ -5,7 +5,7 @@
 - Preserve existing functionality unless change is explicitly requested.
 - Prefer existing architecture and conventions.
 - Avoid unnecessary rewrites.
-- Avoid duplicate implementations.
+- Avoid duplicate implementations when existing functionality satisfies the requirement; a distinct implementation may be appropriate when the requirement explicitly calls for it or existing functionality cannot satisfy it.
 - Avoid unnecessary dependencies.
 - Keep changes focused.
 - Keep code maintainable.
@@ -22,7 +22,7 @@
 
 - Inspect the current application structure before changing it.
 - Preserve server/client boundaries.
-- Reuse existing components and patterns.
+- Reuse existing components and patterns when they satisfy the requested behavior; do not let reuse guidance silently override an explicit requirement for distinct behavior.
 - Avoid unnecessary global state.
 - Consider server-side and client-side data flow.
 
@@ -30,7 +30,7 @@
 
 - Inspect the existing component and composable patterns.
 - Reuse established state-management and data-access patterns.
-- Avoid creating parallel implementations of existing behavior.
+- Avoid creating parallel implementations when existing behavior satisfies the requirement; if a separate implementation is explicitly required, investigate the trade-offs and follow the requirement unless a higher-order constraint prevents it.
 
 ## Tailwind / CSS
 

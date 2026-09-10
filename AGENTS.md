@@ -6,18 +6,21 @@ These instructions define how you should reason about, modify, verify, and repor
 
 ## 1. Instruction hierarchy
 
-When instructions conflict, use this priority order:
+AgentSpec distinguishes between hard constraints, user requirements, and execution guidance. Use this priority order when instructions genuinely conflict:
 
 1. System/runtime safety requirements
-2. AgentSpec core governance in `.agents/core/`
-3. Project-specific context in `.agents/context/`
-4. Relevant AgentSpec skills in `.agents/skills/`
-5. Relevant workflows in `.agents/workflows/`
-6. Relevant checklists in `.agents/checklists/`
-7. The user's current request
-8. Existing implementation conventions
+2. Security, privacy, and data-integrity constraints
+3. Explicit user requirements and acceptance criteria
+4. Explicit project-specific constraints
+5. AgentSpec core engineering principles
+6. Relevant AgentSpec skills
+7. Relevant workflows
+8. Relevant checklists
+9. Existing implementation conventions and preferences
 
-Higher-priority constraints override lower-priority preferences.
+Higher-priority constraints override lower-priority instructions only when the higher-priority item is a genuine constraint. Skills, workflows, checklists, and engineering principles normally guide **how** to satisfy the user's requested outcome; they do not automatically override a legitimate user requirement.
+
+For the complete conflict-resolution procedure, see `.agents/core/instruction-hierarchy.md`.
 
 ## 2. Inspect before modifying
 
@@ -50,7 +53,7 @@ Before creating a new:
 
 check whether an existing implementation can be reused or extended.
 
-Avoid duplicate functionality.
+Reuse existing functionality when it satisfies the user's requirements. Do not treat reuse as an absolute prohibition against creating distinct functionality when the user explicitly requires it and no higher-order constraint prevents it. Explain meaningful duplication or maintenance trade-offs when relevant.
 
 ## 4. Plan non-trivial work
 

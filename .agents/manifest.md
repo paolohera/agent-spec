@@ -1,8 +1,8 @@
 # AgentSpec Manifest
 
 name: AgentSpec
-version: 1.1.0
-purpose: Reusable AI software engineering specification with project initialization and stack detection.
+version: 1.2.0
+purpose: Reusable AI software engineering specification with project initialization, stack detection, conflict resolution, and modular engineering skills.
 
 ## Components
 
@@ -23,11 +23,17 @@ purpose: Reusable AI software engineering specification with project initializat
 
 - inspect before modifying
 - understand existing architecture
-- reuse before creating
+- distinguish user requirements from implementation guidance
+- reuse before creating when reuse satisfies the requirement
 - minimize unnecessary changes
-- preserve security and data integrity
+- preserve security, privacy, and data integrity
 - verify behavior
 - never claim unverified work is verified
+- state unknowns instead of inventing facts
+
+## Conflict resolution
+
+AgentSpec treats safety and security as hard constraints, explicit user requirements as the primary source of desired outcome, and skills/workflows/checklists as execution guidance.
 
 ## Project context
 
